@@ -1,0 +1,36 @@
+
+<div class="py-5 bg-dark">
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-primary text-cente">Target Logistics Inc Shipment Calculator</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="lead text-light text-center">EXCHANGE RATE: $1 USD = $220 GUY <br> FREIGHT: $3 USD per pound <br> Handling: $1200 GYD&nbsp;<br>Consolidation: $2 USD per Package<br>Insurance is considered up on Request.<br><br></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-12">
+          <div class="form-group w-50"><label class="text-light">Enter Total Estimated Weight in lbs<br></label> <input [(ngModel)]="weight" type="number" class="form-control form-control-lg w-50" placeholder="pounds" required="required" > </div>
+        </div>
+      </div>
+      <div class="col-md-6"><label class="text-light">Enter Expected # of packages</label><input type="number" id="pack" class="form-control w-50 form-control-lg" required="required" [(ngModel)]="packages" ></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"><button type="submit" class="btn text-center btn-primary" (click)="calculate()">Calculate Price</button></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-light">Total Cost in GUY:</p>
+        <p class="text-light" id="cost"> {{cost}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>document.getElementById("pack").defaultValue = "16";</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
