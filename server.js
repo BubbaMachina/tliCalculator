@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static(__dirname+"dist/tliCalculator"));
 
-app.get('*',function(req,res){
+app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+ '/dist/tliCalculator/index.html'));
 });
 
