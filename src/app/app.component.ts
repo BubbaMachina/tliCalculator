@@ -14,7 +14,7 @@ export class AppComponent {
   calculate() {
     if(this.weight > 0){
       if (this.packages>1){
-        this.cost = (this.weight*220*3)+((this.packages -1 )*2*220)+1200;
+        this.cost = (this.weight*220*3)+((this.packages )*2*220)+1200;
       }
       else{
         this.cost = (this.weight*220*3)+1200;
